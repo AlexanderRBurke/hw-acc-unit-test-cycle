@@ -10,7 +10,11 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :movies
+  resources :movies do 
+    member do
+      get "same_director"
+    end
+  end
   
   # You can have the root of your site routed with "root"
   root 'movies#index'  
